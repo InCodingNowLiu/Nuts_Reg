@@ -1,0 +1,5 @@
+{
+    "dependencies": {
+        "restify-clients": "^2.5.2"
+    }
+}
