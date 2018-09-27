@@ -20,3 +20,11 @@ let compareFunc = function (originStr, targetStr) {
         return false;
     }
 }
+
+exports.clipSecureCode = function (text) {
+    
+    let res = text.replace(/【Nuts】尊敬的用户，您的注册会员动态密码为：/g, '');
+    res = res.replace(/，请勿泄漏于他人！/g, '');
+    console.log(res);
+    return res;
+}
