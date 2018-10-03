@@ -46,3 +46,21 @@ exports.blackList = async function (token, projectId, phoneNum) {
     let result = await request.get(url);
     return result;
 }
+
+// exports.sendSmsCode = async function(phone) {
+//     let url = `http://101.132.75.100/dlm/api/customer/sendSMS?phone=${phone}&type=1&imgcode=`
+//     let result = await request.get(url);
+//     return result;
+// }
+
+
+//网页端发送验证码
+exports.WebSendSmsCode = async function (phone) {
+    let res = request.post('http://101.132.75.100/dlm//api/customer/sendSMS', { form: { phone: phone, type: '1' }});
+    return res;
+}
+
+exports.WebRegister = async function (phone, validate) {
+    let res = request.post('http://101.132.75.100/dlm/api/customer/register', { form: { phone: phone, validate: validate, password: 'qq123123', invite: 'VPDZ6M'}});
+    return res;
+}
