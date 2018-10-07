@@ -19,8 +19,8 @@ exports.getYiMAUserInfo = async function (token) {
 
 //获取电话号码接口
 exports.getMobileNumber = async function (token, projectId) {
-    //
-    let url = `http://api.fxhyd.cn/UserInterface.aspx?action=getmobile&token=${token}&itemid=${projectId}`
+    // excludeno = 170.171.180
+    let url = `http://api.fxhyd.cn/UserInterface.aspx?action=getmobile&token=${token}&itemid=${projectId}&excludeno=170.171`
     let result = await request.get(url);
     console.log(result);
     return result;
