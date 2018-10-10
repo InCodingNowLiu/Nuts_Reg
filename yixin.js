@@ -61,6 +61,13 @@ exports.WebSendSmsCode = async function (phone) {
 }
 
 exports.WebRegister = async function (phone, validate) {
-    let res = request.post('http://101.132.75.100/dlm/api/customer/register', { form: { phone: phone, validate: validate, password: 'qq123123', invite: 'VPDZ6M'}});
+    //http://nutsblock.io/register/share/invite_reg.html?recsdn=XNZIY7&name=17621398980&icon=null
+    //http://nutsblock.io/register/share/invite_reg.html?recsdn=140ZLV&name=13816346759&icon=null
+    //jiqing
+    // let res = request.post('http://101.132.75.100/dlm/api/customer/register', { form: { phone: phone, validate: validate, password: 'qq123123', invite: 'VPDZ6M'}});
+    //brunce
+    // let res = request.post('http://101.132.75.100/dlm/api/customer/register', { form: { phone: phone, validate: validate, password: 'qq123123', invite: 'XNZIY7'}});
+    //darrick
+    let res = request.post('http://101.132.75.100/dlm/api/customer/register', { form: { phone: phone, validate: validate, password: 'qq123123', invite: '140ZLV'}});
     return res;
 }
